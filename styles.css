@@ -5,11 +5,20 @@
 .row{
     display: flex;
     flex: 1;  /*fills container*/
-    background-color: pink;
+    cursor: pointer;
+    
     
 }
 .column {
     display: flex ;
     flex: 1;
-    background-color: blue;
+    cursor: pointer;
+    color: transparent;
+    
+    
+}
+
+ .column:hover{
+background-color: black;
+
 }
