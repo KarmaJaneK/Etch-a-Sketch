@@ -1,14 +1,15 @@
-//buttons
 
+
+
+//button interactivity
 const buttons = document.querySelectorAll('button');
 
-//remove the active class
 function removeActiveClass(){
     buttons.forEach(button => button.classList.remove('active'));
 
 }
 
-//click event listener
+
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         removeActiveClass();
@@ -17,17 +18,11 @@ buttons.forEach(button => {
 });
 
 const container = document.querySelector('.container');
-
-function createGrid() {
+//default grid
+function createGrid(gridSize) {
     container.innerHTML = '';
 
-    const gridSize = parseInt(prompt("Please enter the number of squares per side (max 100):", 10));
-
-    // Validate the input
-    if (isNaN(gridSize) || gridSize <= 0 || gridSize > 100) {
-        alert("Please enter a valid positive number.");
-        return;
-    }
+    
      // Set the CSS variable for grid size
      container.style.setProperty('--grid-size', gridSize);
 
@@ -41,6 +36,19 @@ function createGrid() {
 
     blackAndWhite(); // Call blackAndWhite after the grid is created
 }
+//new grid
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const newSize = prompt("Enter a new grid size (max 100):");
+        const gridSize = parseInt(newSize, 10);
+        // Validate the input
+    if (isNaN(gridSize) || gridSize <= 0 || gridSize > 100) {
+        alert("Please enter a valid positive number.");
+        return;
+    }
+        createGrid(gridSize);
+    } );
+})
 
 // Black and White mode function
 function blackAndWhite() {
@@ -69,7 +77,7 @@ function rainbow() {
     function getRandomColor() {
         return rainbowColors[Math.floor(Math.random() * rainbowColors.length)];
     }
-
+//rainbow 
     document.querySelectorAll('.column').forEach(element => {
         element.addEventListener('mouseenter', () => {
             element.style.backgroundColor = getRandomColor();
@@ -79,10 +87,20 @@ function rainbow() {
         });
     });
     
-    
 
+
+}
+//erasor
+function eraser(){
+    document.querySelectorAll('.column').forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            element.style.backgroundColor = '#C0C0C0';
+        });
+        element.addEventListener('mouseleave', () => {
+            element.style.backgroundColor = '#C0C0C0';
+        });
+    });
 }
 
 // Initialize the grid
-createGrid();
-
+createGrid(10);
