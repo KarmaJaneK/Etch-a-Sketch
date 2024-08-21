@@ -1,5 +1,8 @@
 body{
-    background-color: rgb(212, 43, 43);
+
+    background-color: #E31A1C;
+    border: 20px solid #000000;
+    margin: 0;
 }
 h1{
     text-wrap: nowrap;
@@ -7,33 +10,39 @@ h1{
         font-family: 'Comic Sans MS', 'Comic Sans', cursive; /* Fun, cartoony font */
         font-style: normal; /* Normal style for a cartoony look */
         font-weight: bold; /* Bold for emphasis */
-        font-size: 10vw; /* Responsive font size, adjusts with viewport width */
+        font-size: 8vw; /* Responsive font size, adjusts with viewport width */
         text-transform: uppercase; /* Makes all text uppercase for a playful effect */
         letter-spacing: 0.1em; /* Adds space between letters for a cartoonish look */
         color:cyan; /* Fun, vibrant color (Tomato) */
-        text-shadow: 10px 10px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; /* Adds a shadow for a 3D effect */
-        margin: 0; /* Removes default margins */
+        text-shadow: 15px 15px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; /* Adds a shadow for a 3D effect */
+        margin: 10px 10px;
         padding: 20px; /* Adds some space around the text */
         width: 100%; /* Ensures the h1 stretches to fit the width of the container */
         box-sizing: border-box; /* Includes padding in width calculation */
     }
     
  
- 
  .container{
    display: flex;
    flex-wrap: wrap;
    width: 960px;
    margin: 20px auto;
+   border: 20px solid #1b1a1a; /* Adds a border around the container */
+   border-radius: 10px; /* Rounded corners */
+   
+   
+    
+}
+   
   
- }
+ 
  
  .column {
    border: 1px solid #ccc;
    box-sizing: border-box;
     width: calc(960px / var(--grid-size));
      height: calc(960px / var(--grid-size));
-   background-color: white;
+   background-color:#C0C0C0;
    cursor: pointer;
    color: transparent;
   
@@ -52,22 +61,24 @@ h1{
     background-color: orange; /* Change background color */
     transform: scale(1.05); /* Slightly enlarge the button */
 }
-button:active{
+button.active{
     background-color: darkorange;
 }
  button{
+    text-align: center;
     padding: 20px;
     margin: 20px;
+    border: 3px solid #000;
     border-radius: 50%;
-    font-weight: bold;
+    font-weight: bolder;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
     background-color: yellow;
+  
     box-shadow: 10px 10px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; /* Adds a shadow for a 3D effect */
 };
 
 
  
 
- 
- 
  
  
