@@ -1,24 +1,73 @@
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
+body{
+    background-color: rgb(212, 43, 43);
 }
-.row{
+h1{
+    text-wrap: nowrap;
+        text-align: center;
+        font-family: 'Comic Sans MS', 'Comic Sans', cursive; /* Fun, cartoony font */
+        font-style: normal; /* Normal style for a cartoony look */
+        font-weight: bold; /* Bold for emphasis */
+        font-size: 10vw; /* Responsive font size, adjusts with viewport width */
+        text-transform: uppercase; /* Makes all text uppercase for a playful effect */
+        letter-spacing: 0.1em; /* Adds space between letters for a cartoonish look */
+        color:cyan; /* Fun, vibrant color (Tomato) */
+        text-shadow: 10px 10px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; /* Adds a shadow for a 3D effect */
+        margin: 0; /* Removes default margins */
+        padding: 20px; /* Adds some space around the text */
+        width: 100%; /* Ensures the h1 stretches to fit the width of the container */
+        box-sizing: border-box; /* Includes padding in width calculation */
+    }
+    
+ 
+ 
+ .container{
+   display: flex;
+   flex-wrap: wrap;
+   width: 960px;
+   margin: 20px auto;
+  
+ }
+ 
+ .column {
+   border: 1px solid #ccc;
+   box-sizing: border-box;
+    width: calc(960px / var(--grid-size));
+     height: calc(960px / var(--grid-size));
+   background-color: white;
+   cursor: pointer;
+   color: transparent;
+  
+ }
+ 
+  .row:hover .column:hover{
+ background-color: black;
+ 
+ }
+ .buttons{
     display: flex;
-    flex: 1;  /*fills container*/
-    cursor: pointer;
-    
-    
+    justify-content: center;
+   
+ }
+ button:hover {
+    background-color: orange; /* Change background color */
+    transform: scale(1.05); /* Slightly enlarge the button */
 }
-.column {
-    display: flex ;
-    flex: 1;
-    cursor: pointer;
-    color: transparent;
-    
-    
+button:active{
+    background-color: darkorange;
 }
+ button{
+    padding: 20px;
+    margin: 20px;
+    border-radius: 50%;
+    font-weight: bold;
+    background-color: yellow;
+    box-shadow: 10px 10px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; /* Adds a shadow for a 3D effect */
+};
 
- .column:hover{
-background-color: black;
 
-}
+ 
+
+ 
+ 
+ 
+ 

@@ -1,4 +1,4 @@
-
+//grid
 
 function createGrid (rows, columns){
    const container = document.querySelector('.container');
@@ -27,7 +27,10 @@ for (let j = 0; j  < columnSize; j++){
     gridSquareColumn.classList.add('column');
     gridSquareColumn.textContent = "Colum";
     gridSquareRow.appendChild(gridSquareColumn);}
+
 } 
+blackAndWhite();
+};
 //black & white
 function blackAndWhite(){
 document.querySelectorAll('.column').forEach(element =>{
@@ -61,4 +64,4 @@ document.querySelectorAll(' .column').forEach(element =>{
     });
     element.addEventListener('mouseleave', () => {
         element.style.backgroundColor = getRandomColor()
-    })})}};
+    })})};
