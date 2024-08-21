@@ -52,13 +52,21 @@ document.querySelectorAll('.btn').forEach(button => {
 
 // Black and White mode function
 function blackAndWhite() {
+    let isDrawing = false;
     document.querySelectorAll('.column').forEach(element => {
-        element.addEventListener('mouseenter', () => {
+        element.addEventListener('mousedown', () => {
+            isDrawing = true;
             element.style.backgroundColor = 'black';
         });
-        element.addEventListener('mouseleave', () => {
+        element.addEventListener('mouseup', () => {
+            isDrawing =false;
             element.style.backgroundColor = 'black';
         });
+        element.addEventListener('mousemove',() => {
+            if(isDrawing){
+                element.style.backgroundColor = 'black';
+            }
+        })
     });
 }
 
@@ -78,29 +86,50 @@ function rainbow() {
         return rainbowColors[Math.floor(Math.random() * rainbowColors.length)];
     }
 //rainbow 
+let isDrawing = false;
     document.querySelectorAll('.column').forEach(element => {
-        element.addEventListener('mouseenter', () => {
+        element.addEventListener('mousedown', () => {
+            isDrawing = true;
             element.style.backgroundColor = getRandomColor();
         });
-        element.addEventListener('mouseleave', () => {
+        element.addEventListener('mouseup', () => {
+            isDrawing = false;
             element.style.backgroundColor = getRandomColor();
         });
+        element.addEventListener('mousemove',() =>{
+            if(isDrawing){
+                element.style.backgroundColor = getRandomColor();
+            }
+        })
     });
     
 
 
 }
-//erasor
+//eraser
 function eraser(){
+    let isDrawing =false;
     document.querySelectorAll('.column').forEach(element => {
-        element.addEventListener('mouseenter', () => {
+        element.addEventListener('mousedown', () => {
+            isDrawing = true;
             element.style.backgroundColor = '#C0C0C0';
         });
-        element.addEventListener('mouseleave', () => {
+        element.addEventListener('mouseup', () => {
+            isDrawing = false;
             element.style.backgroundColor = '#C0C0C0';
         });
+        element.addEventListener('mousemove',() => {
+            if(isDrawing){
+                element.style.backgroundColor ='#C0C0C0';
+        }
+        })
     });
 }
 
 // Initialize the grid
 createGrid(10);
+
+//color wheel
+//shading
+//slider
+
