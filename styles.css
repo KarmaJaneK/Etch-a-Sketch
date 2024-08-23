@@ -27,25 +27,22 @@ h1 {
 }
 
 .wrapper {
-   display:flex;
+display:flex;
   align-items:center;
   justify-content: center;
   position: relative;
-
   
 }
 
 
 .container {
    display: flex;
+   flex: 1;
+   aspect-ratio: 1;
    margin-right: auto;
-   
-align-content: center;
+   align-self: center;
    justify-content: center;
-   flex-wrap: wrap;
-
-   height: 50vh;
-   width: 50vh;
+   flex-wrap: wrap; 
    max-width: 80vh;
    max-height: 80vh;
    margin: 10px;
@@ -53,6 +50,7 @@ align-content: center;
    border-radius: 10px;
    position: relative;
    margin-bottom: 0;
+   
    
    
 }
@@ -76,7 +74,6 @@ align-content: center;
 .buttons {
    
    
-  margin-top: 15vh;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -85,6 +82,7 @@ align-content: center;
    
    
 }
+
 
 button:hover {
    background-color: orange;
